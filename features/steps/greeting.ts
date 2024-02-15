@@ -1,11 +1,19 @@
-import { When, Then } from '@cucumber/cucumber';
+import { binding, given, when, then } from "cucumber-tsflow";
 
-When('the greeter says hello', function () {
-  return 'hello'
-});
+@binding()
+class Greeter {
 
-const then = (expectedResponse) => {
-  return expectedResponse == 'hello'
+  greeting = ''
+
+  @when('the greeter says {string}')
+  public greeterSays(greeting: string): void {
+    this.greeting = greeting
+  }
+  
+  @then('I should have heard {string}')
+  public hear(greeting: string): void {
+    // assert.equal(this.greeting, greeting)
+  }
 }
 
-Then('I should have heard {string}', then);
+export = Greeter;

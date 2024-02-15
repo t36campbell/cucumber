@@ -4,7 +4,7 @@
   "description": "",
   "author": "",
   "private": true,
-  "type": "module",
+  "type": "commonjs",
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
@@ -17,7 +17,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
-    "test:cucumber": "cucumber-js --config cucumber.cjs",
+    "test:cucumber": "node ./node_modules/@cucumber/cucumber/bin/cucumber-js features/**/*.feature --require features/steps/**/*.ts --require-module ts-node/register --format @cucumber/pretty-formatter --format json:reports/report.json --format summary",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
@@ -41,6 +41,8 @@
     "@types/supertest": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
+    "cucumber-pretty": "^6.0.1",
+    "cucumber-tsflow": "^4.4.1",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",

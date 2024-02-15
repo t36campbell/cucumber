@@ -1,0 +1,143 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "bank-account;stores-money",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Stores money",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 235124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "A bank account with starting balance of $100",
+            "match": {
+              "location": "features/steps/account.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 151667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "$100 is deposited",
+            "match": {
+              "location": "features/steps/account.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "The bank account balance should be $200",
+            "match": {
+              "location": "features/steps/account.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27124
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 22707
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "bank-account",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Bank Account",
+    "tags": [],
+    "uri": "features/account.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "greeting;say-hello",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Say hello",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 18958
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "the greeter says \"hello\"",
+            "match": {
+              "location": "features/steps/greeting.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 45041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "I should have heard \"hello\"",
+            "match": {
+              "location": "features/steps/greeting.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20457
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8375
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "greeting",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Greeting",
+    "tags": [],
+    "uri": "features/greeting.feature"
+  }
+]
