@@ -18,9 +18,10 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "moduleResolution": "node",
-  },
-  "include": [
-    "./features/**/*",
-    "./features/steps/**/*",
-  ]
+    "paths": {
+      "@order/*": ["src/order/*"],
+      "@product/*": ["src/product/*"],
+      "@store/*": ["src/store/*"],
+    }
+  }
 }
