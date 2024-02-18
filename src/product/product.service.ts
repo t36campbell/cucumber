@@ -24,6 +24,10 @@ export class ProductService {
     return this.products.at(index);
   }
 
+  async delete(id: string): Promise<void> {
+    this.products = this.products.filter((p) => p.id !== id);
+  }
+
   private compare(
     key: ProductSort,
     asc: boolean,
@@ -48,10 +52,6 @@ export class ProductService {
     return this.products
       .filter((p) => p.active === active)
       .sort((a, b) => this.compare(sort, asc, a, b));
-  }
-
-  async delete(id: string): Promise<void> {
-    this.products = this.products.filter((p) => p.id !== id);
   }
 
   async search(

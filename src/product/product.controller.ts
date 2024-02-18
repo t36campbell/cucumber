@@ -21,6 +21,11 @@ export class ProductController {
     return await this.product.update(id, product);
   }
 
+  @Delete(':id')
+  async delete(id: string): Promise<void> {
+    return await this.product.delete(id);
+  }
+
   @Get()
   async list(
     sort: ProductSort = 'name',
@@ -28,11 +33,6 @@ export class ProductController {
     active = true,
   ): Promise<Product[]> {
     return await this.product.list(sort, asc, active);
-  }
-
-  @Delete(':id')
-  async delete(id: string): Promise<void> {
-    return await this.product.delete(id);
   }
 
   @Get('search')
