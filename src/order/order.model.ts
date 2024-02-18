@@ -1,19 +1,19 @@
 export enum Fulfillment {
-  PARTIAL,
-  FULFILLED,
-  SCHEDULED,
   UNFULFILLED,
+  SCHEDULED,
+  FULFILLED,
 }
 
 export enum Status {
   OPEN,
   CANCELED,
+  CLOSED,
 }
 
 export enum Payment {
-  PAID,
   PENDING,
   DECLINED,
+  PAID,
 }
 
 export interface Item {
@@ -26,8 +26,19 @@ export interface Item {
 export interface Order {
   id?: string;
   items: Item[];
+  total: number;
   status?: Status;
-  payment?: Payment;
   customer: string; // assumption foreign key for customer's info (name, address, billing, etc)
+  payment?: Payment;
   fulfillment?: Fulfillment;
 }
+
+export interface OrderFilter {
+  id?: string;
+  status?: Status;
+  customer: string;
+  payment?: Payment;
+  fulfillment?: Fulfillment;
+}
+
+export type OrderSort = 'id' | 'total' | 'status' | 'payment' | 'fulfillment';
