@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 357542
+              "duration": 356708
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4574833
+              "duration": 4210249
             }
           },
           {
@@ -40,7 +40,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1076374
+              "duration": 720584
             }
           },
           {
@@ -82,7 +82,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 517250
+              "duration": 598624
             }
           },
           {
@@ -95,7 +95,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1526042
+              "duration": 1742416
             }
           },
           {
@@ -108,7 +108,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1257416
+              "duration": 1310875
             }
           },
           {
@@ -121,7 +121,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 432375
+              "duration": 423957
             }
           },
           {
@@ -159,7 +159,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1816541
+              "duration": 449082
             }
           },
           {
@@ -167,341 +167,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 50249
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "orders;delete-order",
-        "keyword": "Scenario",
-        "line": 59,
-        "name": "Delete Order",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 374292
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "the orders service is instantiated",
-            "match": {
-              "location": "features/steps/order.spec.ts:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4170750
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 5,
-            "name": "the orders controller is instantiated",
-            "match": {
-              "location": "features/steps/order.spec.ts:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 768916
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "id",
-                      "total",
-                      "status",
-                      "customer",
-                      "payment",
-                      "fulfillment"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "44340298",
-                      "123.45",
-                      "0",
-                      "372e4fefbc1c",
-                      "0",
-                      "0"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "Given ",
-            "line": 60,
-            "name": "an order with following info:",
-            "result": {
-              "status": "undefined",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 63,
-            "name": "I request to delete an order with id \"44340298\"",
-            "result": {
-              "status": "undefined",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 64,
-            "name": "that order will not exist anymore",
-            "result": {
-              "status": "undefined",
-              "duration": 0
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 32500
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "orders;update-order",
-        "keyword": "Scenario",
-        "line": 40,
-        "name": "Update Order",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 116916
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "the orders service is instantiated",
-            "match": {
-              "location": "features/steps/order.spec.ts:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 237082
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 5,
-            "name": "the orders controller is instantiated",
-            "match": {
-              "location": "features/steps/order.spec.ts:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 421207
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "id",
-                      "quantity"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "2adb5089372e",
-                      "1"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "9822481c8d8d",
-                      "2"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "4707bcf066b0",
-                      "3"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "Given ",
-            "line": 41,
-            "name": "an order with the following items:",
-            "match": {
-              "location": "features/steps/order.spec.ts:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 160874
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "id",
-                      "total",
-                      "status",
-                      "customer",
-                      "payment",
-                      "fulfillment"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "44340298",
-                      "123.45",
-                      "0",
-                      "372e4fefbc1c",
-                      "0",
-                      "0"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "And ",
-            "line": 46,
-            "name": "the following order info:",
-            "match": {
-              "location": "features/steps/order.spec.ts:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 511165
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 49,
-            "name": "I update the payment to \"PAID\", the fulfillment to \"FULFILLED\", and the status to \"CLOSED\" for order id \"44340298\"",
-            "match": {
-              "location": "features/steps/order.spec.ts:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5746207
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "id",
-                      "total",
-                      "status",
-                      "customer",
-                      "payment",
-                      "fulfillment"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "44340298",
-                      "123.45",
-                      "CLOSED",
-                      "372e4fefbc1c",
-                      "PAID",
-                      "FULFILLED"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "Then ",
-            "line": 50,
-            "name": "the updated order will have the following info:",
-            "match": {
-              "location": "features/steps/order.spec.ts:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 518375
-            }
-          },
-          {
-            "arguments": [
-              {
-                "rows": [
-                  {
-                    "cells": [
-                      "id",
-                      "quantity"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "2adb5089372e",
-                      "1"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "9822481c8d8d",
-                      "2"
-                    ]
-                  },
-                  {
-                    "cells": [
-                      "4707bcf066b0",
-                      "3"
-                    ]
-                  }
-                ]
-              }
-            ],
-            "keyword": "And ",
-            "line": 53,
-            "name": "the order will have the following items:",
-            "match": {
-              "location": "features/steps/order.spec.ts:4"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 483083
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 16458
+              "duration": 41333
             }
           }
         ],
@@ -520,7 +186,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 302917
+              "duration": 189208
             }
           },
           {
@@ -533,7 +199,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3597249
+              "duration": 138249
             }
           },
           {
@@ -546,7 +212,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 615958
+              "duration": 241417
             }
           },
           {
@@ -588,7 +254,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 552042
+              "duration": 185958
             }
           },
           {
@@ -626,7 +292,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 415000
+              "duration": 536041
             }
           },
           {
@@ -639,7 +305,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1700374
+              "duration": 1403750
             }
           },
           {
@@ -677,7 +343,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 669750
+              "duration": 644917
             }
           },
           {
@@ -719,7 +385,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 502375
+              "duration": 628666
             }
           },
           {
@@ -727,7 +393,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 45582
+              "duration": 13458
             }
           }
         ],
@@ -735,26 +401,342 @@
         "type": "scenario"
       },
       {
-        "description": "    Given\n    When\n    Then",
-        "id": "orders;search-orders",
+        "description": "",
+        "id": "orders;update-order",
         "keyword": "Scenario",
-        "line": 71,
-        "name": "Search Orders",
+        "line": 40,
+        "name": "Update Order",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 98874
+              "duration": 108207
             }
           },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the orders service is instantiated",
+            "match": {
+              "location": "features/steps/order.spec.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the orders controller is instantiated",
+            "match": {
+              "location": "features/steps/order.spec.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41167
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "quantity"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2adb5089372e",
+                      "1"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "9822481c8d8d",
+                      "2"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "4707bcf066b0",
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 41,
+            "name": "an order with the following items:",
+            "match": {
+              "location": "features/steps/order.spec.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38290
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "total",
+                      "status",
+                      "customer",
+                      "payment",
+                      "fulfillment"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "44340298",
+                      "123.45",
+                      "OPEN",
+                      "372e4fefbc1c",
+                      "PENDING",
+                      "UNFULFILLED"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 46,
+            "name": "the following order info:",
+            "match": {
+              "location": "features/steps/order.spec.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 95542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 49,
+            "name": "I update payment to \"PAID\", fulfillment to \"FULFILLED\", and status to \"CLOSED\" for order id \"44340298\"",
+            "match": {
+              "location": "features/steps/order.spec.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2659167
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "total",
+                      "status",
+                      "customer",
+                      "payment",
+                      "fulfillment"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "44340298",
+                      "123.45",
+                      "CLOSED",
+                      "372e4fefbc1c",
+                      "PAID",
+                      "FULFILLED"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 50,
+            "name": "the updated order will have the following info:",
+            "match": {
+              "location": "features/steps/order.spec.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 568292
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "quantity"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "2adb5089372e",
+                      "1"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "9822481c8d8d",
+                      "2"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "4707bcf066b0",
+                      "3"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 53,
+            "name": "the order will have the following items:",
+            "match": {
+              "location": "features/steps/order.spec.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6916
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "orders;delete-order",
+        "keyword": "Scenario",
+        "line": 59,
+        "name": "Delete Order",
+        "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 4792
+              "duration": 229458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "the orders service is instantiated",
+            "match": {
+              "location": "features/steps/order.spec.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 66915
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "the orders controller is instantiated",
+            "match": {
+              "location": "features/steps/order.spec.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29833
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "total",
+                      "status",
+                      "customer",
+                      "payment",
+                      "fulfillment"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "44340298",
+                      "123.45",
+                      "OPEN",
+                      "372e4fefbc1c",
+                      "PENDING",
+                      "UNFULFILLED"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 60,
+            "name": "an order with following info:",
+            "match": {
+              "location": "features/steps/order.spec.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 405500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 63,
+            "name": "I request to delete an order with id \"44340298\"",
+            "match": {
+              "location": "features/steps/order.spec.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 859624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 64,
+            "name": "that order \"44340298\" will not exist anymore",
+            "match": {
+              "location": "features/steps/order.spec.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 773874
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14792
             }
           }
         ],
@@ -773,7 +755,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 101666
+              "duration": 386875
             }
           },
           {
@@ -781,7 +763,34 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 8042
+              "duration": 33208
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "    Given\n    When\n    Then",
+        "id": "orders;search-orders",
+        "keyword": "Scenario",
+        "line": 71,
+        "name": "Search Orders",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 95124
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8582
             }
           }
         ],
@@ -811,7 +820,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 50291
+              "duration": 48125
             }
           },
           {
@@ -819,7 +828,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 8749
+              "duration": 17666
             }
           }
         ],
@@ -838,7 +847,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 49874
+              "duration": 54666
             }
           },
           {
@@ -846,7 +855,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 6417
+              "duration": 9334
             }
           }
         ],
@@ -865,7 +874,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 51416
+              "duration": 37124
             }
           },
           {
@@ -873,61 +882,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 8083
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "    Given\n    When\n    Then",
-        "id": "products;list-products",
-        "keyword": "Scenario",
-        "line": 26,
-        "name": "List Products",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 164624
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 11374
-            }
-          }
-        ],
-        "tags": [],
-        "type": "scenario"
-      },
-      {
-        "description": "    Given\n    When\n    Then",
-        "id": "products;search-products",
-        "keyword": "Scenario",
-        "line": 31,
-        "name": "Search Products",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 80167
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 142208
+              "duration": 4042
             }
           }
         ],
@@ -946,7 +901,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 48040
+              "duration": 49250
             }
           },
           {
@@ -954,7 +909,61 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 11458
+              "duration": 10540
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "    Given\n    When\n    Then",
+        "id": "products;list-products",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "List Products",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 30958
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3374
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "    Given\n    When\n    Then",
+        "id": "products;search-products",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "Search Products",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 42417
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9333
             }
           }
         ],

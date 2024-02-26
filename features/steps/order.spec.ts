@@ -142,7 +142,7 @@ class Create {
   }
 
   @when(
-    'I update the payment to {string}, the fulfillment to {string}, and the status to {string} for order id {string}',
+    'I update payment to {string}, fulfillment to {string}, and status to {string} for order id {string}',
   )
   public async update(
     payment: string,
@@ -170,6 +170,33 @@ class Create {
     // eslint-disable-next-line @typescript-eslint/no-magic-numbers
     await this.testOrder(order, 2);
   }
-}
 
+  @given('an order with following info:')
+  public async set(table: DataTable): Promise<void> {
+    const items = this.data.items;
+    const orders = this.covertToOrder(table);
+    const { id, total, status, customer, payment, fulfillment } = orders.pop();
+    this.data = {
+      id,
+      total,
+      items,
+      customer,
+      status: Status[status] as unknown as Status,
+      payment: Payment[payment] as unknown as Payment,
+      fulfillment: Fulfillment[fulfillment] as unknown as Fulfillment,
+    };
+    this.service.orders.push(this.data);
+  }
+
+  @when('I request to delete an order with id {string}')
+  public async delete(id: string): Promise<void> {
+    await this.service.delete(id);
+  }
+
+  @then('that order {string} will not exist anymore')
+  public async deleted(id: string): Promise<void> {
+    this.order = await this.service.get(id);
+    assert.equal(this.order, undefined);
+  }
+}
 export default Create;
